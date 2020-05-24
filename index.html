@@ -6,11 +6,11 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a>
+      <nav class="main-navigation">
+        <a class="logo-sedona">
           <img src="img/logo.svg" width="138" height="70" alt="Логотип города Седона">
         </a>
-        <ul>
+        <ul class="nav-list">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -21,13 +21,12 @@
 
     <main>
 
-      <h1>Город Седона</h1>
+      <h1 class="visually-hidden">Город Седона</h1>
 
       <section class="welcome">
-      <img src="img/welcome-img-group.png" width="1200" height="" alt="Welcome to the gorgeous Sedona!">
-      <!-- Временное решение -->
-      <p class="motto-en">Welcome to the gorgeous Sedona! "Because the Grand Canyon sucks!"</p>
-      <p class="motto">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+        <img src="img/welcome-img-group.png" width="1200" height="" alt="Welcome to the gorgeous Sedona!">
+        <p class="motto-en visually-hidden">Welcome to the gorgeous Sedona! "Because the Grand Canyon sucks!"</p>
+        <p class="motto">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
       </section>
 
       <h2>Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон!</h2>
@@ -80,14 +79,33 @@
       </section>
 
       <section class="hotels">
-        <h2>Гостиницы в Седоне</h2>
+        <h2 class="visually-hidden">Гостиницы в Седоне</h2>
         <p><span>Заинтересовались?</span> Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <!-- Здесь будет форма бронирования отеля -->
-        <a href="hotels">Найти</a>
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
+          <h3>Поиск гостиницы в Седоне</h3>
+          <label>
+            Дата заезда:
+            <input type="text" name="from-date" placeholder="24 апреля 2017" required>
+          </label>
+          <label>
+            Дата выезда:
+            <input type="text" name="till-date" placeholder="4 июля 2017">
+          </label>
+          <label>
+            Взрослые:
+            <input type="number" name="adults" value="2">
+          </label>
+          <label>
+            Дети:
+            <input type="number" name="children" value="0">
+          </label>
+          <input type="submit" value="Найти" tabindex="0">
+          <!-- <a href="hotels">Найти</a> -->
+        </form>
       </section>
 
       <section class="map">
-        <h2>Карта города Седона и окрестностей</h2>
+        <h2 visually-hidden>Карта города Седона и окрестностей</h2>
         <img src="img/map.jpg" width="1200" height="594" alt="Карта города Седона и окрестностей">
       </section>
 
@@ -99,16 +117,16 @@
         <a href="#">Тел: +7(495) 666-01-66</a>
       </div>
       <div class="social-media">
-        <h4>Социальные сети</h4>
+        <h4 class="visually-hidden">Социальные сети</h4>
         <ul>
           <li>
-            <a href="#">Twitter</a>
+            <a href="#"><span class="visually-hidden">Twitter</span></a>
           </li>
           <li>
-            <a href="#">Facebook</a>
+            <a href="#"><span class="visually-hidden">Facebook</span></a>
           </li>
           <li>
-            <a href="#">YouTube</a>
+            <a href="#"><span class="visually-hidden">YouTube</span></a>
           </li>
         </ul>
       </div>
