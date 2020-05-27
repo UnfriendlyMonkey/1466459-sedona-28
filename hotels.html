@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Отели в Седоне</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -21,7 +24,7 @@
     </header>
 
     <main>
-      <form action="https://echo.htmlacademy.ru/courses" method="get">
+      <form class="hotel-choice" action="https://echo.htmlacademy.ru/courses" method="get">
         <h2 class="visually-hidden">Форма выбора отеля по критериям</h2>
         <fieldset class="infrastructure">
           <legend>Инфраструктура:</legend>
@@ -81,7 +84,7 @@
           </label>
           <!-- или здесь лучше два input type="range" сделать? -->
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="button" type="submit">Показать</button>
       </form>
 
       <section class="search-results">
@@ -119,8 +122,8 @@
           <div class="hotel-description">
             <h2><a href="#">Amara resort & spa</a></h2>
             <span>Гостиница</span><span>От 4000 р.</span>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
+            <a class="button blue-button" href="#">Подробнее</a>
+            <a class="button brown-button" href="#">Забронировать</a>
           </div>
           <div class="hotel-rating">
             <span>Рейтинг: 8,5</span>
@@ -133,8 +136,8 @@
           <div class="hotel-description">
             <h2><a href="#">Desert Quail Inn</a></h2>
             <span>Мотель</span><span>От 3000 р.</span>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
+            <a class="button blue-button" href="#">Подробнее</a>
+            <a class="button brown-button" href="#">Забронировать</a>
           </div>
           <div class="hotel-rating">
             <span>Рейтинг: 8,9</span>
@@ -148,8 +151,8 @@
             <h2><a href="#">Villas at Poco Diablo</a></h2>
             <span>Апартаменты</span>
             <span>От 2000 р.</span>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
+            <a class="button blue-button" href="#">Подробнее</a>
+            <a class="button brown-button" href="#">Забронировать</a>
           </div>
           <div class="hotel-rating">
             <span>Рейтинг: 9,2</span>
