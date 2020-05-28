@@ -70,6 +70,13 @@ img {
   color: var(--max-black);
 }
 
+.nav-list a:not([href]),
+.nav-list a:not([href]):hover,
+.nav-list a:not([href]):focus,
+.nav-list a:not([href]):active {
+  color: var(--brown-light);
+}
+
 .nav-list a:hover,
 .nav-list a:focus {
   color: var(--blue-light);
@@ -259,6 +266,14 @@ img {
   list-style: none;
 }
 
+.social-media svg {
+  fill: var(--max-white);
+}
+
+.social-media a:active svg {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
 .made-by {
   font-size: 14px;
   line-height: 26px;
@@ -286,11 +301,23 @@ img {
   background-image: url('../img/background.jpg');
   background-position: top center;
   background-repeat: no-repeat;
+}
 
+.hotel-choice ul {
+  list-style: none;
+}
+
+.hotel-choice legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 800;
 }
 
 .hotel-choice input,
 .hotel-choice button {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--max-white);
   font-weight: 400;
   background-color: transparent;
   border-style: solid;
@@ -299,3 +326,68 @@ img {
   border-radius: 2px;
 }
 
+.hotel-choice button:hover,
+.hotel-choice button:focus,
+.hotel-choice button:active {
+  background-color: var(--max-white);
+  color: var(--max-black);
+}
+
+.search-results h3,
+.search-results h3 a {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 800;
+  color: var(--max-black);
+}
+
+.search-results ul {
+  list-style: none;
+}
+
+.sorting-type {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-type a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline dotted var(--blue-light);
+}
+
+.type-active a {
+  color: var(--blue-light);
+  text-decoration: none;
+}
+
+.sorting-type a:hover,
+.sorting-type a:focus {
+  color: var(--blue-light);
+}
+
+.sorting-type a:active {
+  color: var(--max-black);
+  text-decoration: none;
+}
+
+.sorting-order a svg {
+  fill: #cacaca;
+}
+
+.order-active a svg {
+  fill: var(--blue-light);
+}
+
+.sorting-order a:hover svg,
+.sorting-order a:focus svg {
+  fill: var(--max-black);
+}
+
+.sorting-order a:active svg {
+  fill: var(--blue-light);
+}
+
+.hotel-rating span {
+  color: #666666;
+  background-color: var(--bg-light);
+}
