@@ -34,7 +34,6 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
-  text-transform: uppercase;
   color: var(--main-text);
   font-weight: 400;
   background-color: var(--max-white);
@@ -61,6 +60,7 @@ img {
   color: var(--max-black);
   font-weight: 700;
   line-height: 26px;
+  text-transform: uppercase;
   background-color: transparent;
 }
 
@@ -95,6 +95,7 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: uppercase;
   color: var(--max-black);
 }
 
@@ -102,6 +103,7 @@ img {
 
 .advantage {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .adv-head {
@@ -136,6 +138,7 @@ img {
 .hotels {
   width: 568px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .interest {
@@ -253,6 +256,10 @@ img {
 
 /* Footer */
 
+footer {
+  text-transform: uppercase;
+}
+
 .main-footer {
   background-color: var(--footer-transparent);
 }
@@ -272,11 +279,11 @@ img {
   list-style: none;
 }
 
-.social-media svg {
+.social-button svg {
   fill: var(--max-white);
 }
 
-.social-media a:active svg {
+.social-button:active svg {
   fill: var(--white-transparent);
 }
 
@@ -303,6 +310,7 @@ img {
 
 .hotel-choice {
   color: var(--max-white);
+  text-transform: uppercase;
   background-color: var(--brown-dark);
   background-image: url('../img/background.jpg');
   background-position: top center;
@@ -337,6 +345,10 @@ img {
 .hotel-choice button:active {
   background-color: var(--max-white);
   color: var(--max-black);
+}
+
+.search-results {
+  text-transform: uppercase;
 }
 
 .search-results h3,
