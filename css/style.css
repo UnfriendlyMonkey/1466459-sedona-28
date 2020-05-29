@@ -13,22 +13,25 @@
   --brown-dark: #503e33;
   --bg-light: #f2f2f2;
   --bg-medium: #ebebeb;
+  --bg-medium-v2: #e5e5e5;
+  --bg-medium-v3: #cacaca;
   --bg-dark: #6a6a6a;
+  --bg-dark-v2: #666666;
   --academy-grey: #bdbbbc;
   --academy-dark: #231F20;
   --bg-3-5: #eeeeee;
   --black-transparent: rgba(0, 0, 0, 0.3);
+  --white-transparent: rgba(255, 255, 255, 0.3);
+  --footer-transparent: rgba(255, 255, 255, 0.9);
 }
 
 /* Global */
 
 body {
-  min-width: 1280px;
+  min-width: 1200px;
   margin: 0;
-  margin-left: 40px;
-  margin-right: 40px;
   padding: 0;
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -37,7 +40,6 @@ body {
   background-color: var(--max-white);
   background-position: top center;
   background-repeat: no-repeat;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 a {
@@ -57,7 +59,7 @@ img {
 
 .main-navigation {
   color: var(--max-black);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 26px;
   background-color: transparent;
 }
@@ -92,7 +94,7 @@ img {
   text-align: center;
   font-size: 21px;
   line-height: 26px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--max-black);
 }
 
@@ -111,7 +113,7 @@ img {
 .advantage h3 {
   font-size: 21px;
   line-height: 21px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--max-black);
 }
 
@@ -139,7 +141,7 @@ img {
 .interest {
   font-size: 30px;
   line-height: 24px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--max-black);
 }
 
@@ -147,7 +149,7 @@ img {
   line-height: 24px;
 }
 
-.hotels h3 {
+.hotels .button {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -157,7 +159,7 @@ img {
 .hotels label {
   font-size: 14px;
   line-height: 26px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   vertical-align: middle;
   color: var(--max-black);
@@ -176,7 +178,7 @@ img {
 .hotels input:not(.button) {
   font-size: 14px;
   line-height: 26px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   vertical-align: middle;
   color: var(--max-black);
@@ -186,7 +188,7 @@ img {
 
 .input-block input:focus {
   background-color: var(--max-white);
-  border: solid #e5e5e5 2px;
+  border: solid var(--bg-medium-v2) 2px;
 }
 
 .input-button {
@@ -232,7 +234,7 @@ img {
 
 .blue-button:active {
   background-color: var(--blue-dark);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--white-transparent);
 }
 
 .brown-button {
@@ -246,19 +248,23 @@ img {
 
 .brown-button:active {
   background-color: var(--brown-dark);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--white-transparent);
 }
 
 /* Footer */
 
 .main-footer {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--footer-transparent);
+}
+
+.hotels-footer {
+  background-color: var(--max-white);
 }
 
 .contacts a {
   font-size: 21px;
   line-height: 26px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--max-black);
 }
 
@@ -271,7 +277,7 @@ img {
 }
 
 .social-media a:active svg {
-  fill: rgba(255, 255, 255, 0.3);
+  fill: var(--white-transparent);
 }
 
 .made-by {
@@ -310,7 +316,7 @@ img {
 .hotel-choice legend {
   font-size: 16px;
   line-height: 21px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .hotel-choice input,
@@ -334,10 +340,10 @@ img {
 }
 
 .search-results h3,
-.search-results h3 a {
+.hotel-name {
   font-size: 21px;
   line-height: 26px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--max-black);
 }
 
@@ -351,7 +357,7 @@ img {
 }
 
 .sorting-type a {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--black-transparent);
   text-decoration: underline dotted var(--blue-light);
 }
 
@@ -370,24 +376,24 @@ img {
   text-decoration: none;
 }
 
-.sorting-order a svg {
-  fill: #cacaca;
+.order-button svg {
+  fill: var(--bg-medium-v3);
 }
 
-.order-active a svg {
+.order-active svg {
   fill: var(--blue-light);
 }
 
-.sorting-order a:hover svg,
-.sorting-order a:focus svg {
+.order-button:hover svg,
+.order-button:focus svg {
   fill: var(--max-black);
 }
 
-.sorting-order a:active svg {
+.order-button:active svg {
   fill: var(--blue-light);
 }
 
 .hotel-rating span {
-  color: #666666;
+  color: var(--bg-dark-v2);
   background-color: var(--bg-light);
 }
