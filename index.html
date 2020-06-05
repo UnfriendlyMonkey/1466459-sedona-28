@@ -22,74 +22,80 @@
       </nav>
     </header>
 
-    <main>
+    <main class="index-main">
 
       <h1 class="visually-hidden">Город Седона</h1>
 
       <section class="welcome">
-        <img src="img/welcome-img-group.png" width="1200" height="510" alt="Welcome to the gorgeous Sedona!">
-        <p class="motto-en visually-hidden">Welcome to the gorgeous Sedona! "Because the Grand Canyon sucks!"</p>
+        <img class="motto-en" src="img/welcome-base.png" width="1200" height="510" alt="Welcome to the gorgeous Sedona! Because the Grand Canyon sucks!">
         <p class="motto">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
       </section>
 
-      <h2 class="advantage adv-head">Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон!</h2>
-      <section class="advantage adv-img">
+      <div class="advantages">
+        <h2 class="advantage adv-head">Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон!</h2>
+        <section class="advantage adv-img">
+          <div class="adv-text">
             <h3>Настоящий городок</h3>
             <span>- №1 -</span>
             <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="img/image-street.jpg" width="800" height="256" alt="Фотография улицы города Седона">
-      </section>
-      <section class="advantage adv-pic">
-            <ul>
-              <li>
-                <h3>Жильё</h3>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-              </li>
-              <li>
-                <h3>Еда</h3>
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-              </li>
-              <li>
-                <h3>Сувениры</h3>
-                <p>Не только китайского, но и местного производства!</p>
-              </li>
-            </ul>
-      </section>
-      <section class="advantage adv-img">
-            <img src="img/image-bridge.jpg" width="800" height="256" alt="Фотография Моста дьявола">
+          </div>
+          <img src="img/image-street.jpg" width="800" height="256" alt="Фотография улицы города Седона">
+        </section>
+        <section class="advantage">
+              <ul class="adv-pic">
+                <li class="adv-pic-item housing">
+                  <h3>Жильё</h3>
+                  <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                </li>
+                <li class="adv-pic-item food">
+                  <h3>Еда</h3>
+                  <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                </li>
+                <li class="adv-pic-item souvenirs">
+                  <h3>Сувениры</h3>
+                  <p>Не только китайского, но и местного производства!</p>
+                </li>
+              </ul>
+        </section>
+        <section class="advantage adv-img">
+          <img src="img/image-bridge.jpg" width="800" height="256" alt="Фотография Моста дьявола">
+          <div class="adv-text">
             <h3>Там есть<br>Мост дьявола</h3>
             <span> — №2 — </span>
             <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
-      </section>
-      <section class="advantage adv-grey">
-        <ul>
-          <li>
-            <h3>Небольшая площадь</h3>
-            <span> — №3 — </span>
-            <p>Все достопримечательности находятся очень близко</p>
-          </li>
-          <li>
-            <h3>Красивая дорога</h3>
-            <span> — №4 — </span>
-            <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
-          </li>
-          <li>
-            <h3>Мало туристов</h3>
-            <span> — №5 — </span>
-            <p>Большинство едет в гранд каньон и толпится там</p>
-          </li>
-        </ul>
-      </section>
+          </div>
+        </section>
+        <section class="advantage">
+          <ul class="adv-grey">
+            <li>
+              <h3>Небольшая площадь</h3>
+              <span> — №3 — </span>
+              <p>Все достопримечательности находятся очень близко</p>
+            </li>
+            <li>
+              <h3>Красивая дорога</h3>
+              <span> — №4 — </span>
+              <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+            </li>
+            <li>
+              <h3>Мало туристов</h3>
+              <span> — №5 — </span>
+              <p>Большинство едет в гранд каньон и толпится там</p>
+            </li>
+          </ul>
+        </section>
+      </div>
 
       <section class="hotels">
         <h2 class="visually-hidden">Гостиницы в Седоне</h2>
-        <span class="interest">Заинтересовались?</span><p>Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+        <span class="interest">Заинтересовались?</span>
+        <p>Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
         <a class="button brown-button" href="hotels.html">
           Поиск гостиницы в Седоне
         </a>
-        <form action="https://echo.htmlacademy.ru/courses" method="get">
-          <label>
-            Дата заезда:
+        <form class="hotels-search-form visible" action="https://echo.htmlacademy.ru/courses" method="get">
+          <label class="date-set">
+            <span class="input-text">Дата заезда:</span>
             <div class="input-block">
               <input type="text" name="from-date" value="24 апреля 2017" required>
               <button type="button" class="input-button">
@@ -100,9 +106,8 @@
               </button>
             </div>
           </label>
-          <br>
-          <label>
-            Дата выезда:
+          <label class="date-set">
+            <span class="input-text">Дата выезда:</span>
             <div class="input-block">
               <input type="text" name="till-date" value="4 июля 2017">
               <button type="button" class="input-button">
@@ -113,41 +118,41 @@
               </button>
             </div>
           </label>
-          <br>
-          <label>
-            Взрослые:
-            <div class="input-block">
-              <button type="button" class="input-button">
-                <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="12" height="3"/>
-                </svg>
-              </button>
-              <input type="number" name="adults" value="2">
-              <button type="button" class="input-button">
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
-                </svg>
-              </button>
-            </div>
-          </label>
-          <label>
-            Дети:
-            <div class="input-block">
-              <button type="button" class="input-button">
-                <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="12" height="3"/>
-                </svg>
-              </button>
-              <input type="number" name="children" value="0">
-              <button type="button" class="input-button">
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
-                </svg>
-              </button>
-            </div>
-          </label>
-          <br>
-          <input class="button blue-button" type="submit" value="Найти" tabindex="0">
+          <div class="how-many-guests">
+            <label class="date-set adults-group">
+              <span class="input-text">Взрослые:</span>
+              <div class="input-block">
+                <button type="button" class="input-button">
+                  <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="12" height="3"/>
+                  </svg>
+                </button>
+                <input type="number" name="adults" value="2">
+                <button type="button" class="input-button">
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
+                  </svg>
+                </button>
+              </div>
+            </label>
+            <label class="date-set children-group">
+              <span class="input-text">Дети:</span>
+              <div class="input-block">
+                <button type="button" class="input-button">
+                  <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="12" height="3"/>
+                  </svg>
+                </button>
+                <input type="number" name="children" value="0">
+                <button type="button" class="input-button">
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
+                  </svg>
+                </button>
+              </div>
+            </label>
+          </div>
+          <input class="button blue-button hotels-choice-button" type="submit" value="Найти" tabindex="0">
         </form>
       </section>
 
@@ -160,12 +165,12 @@
 
     <footer class="main-footer">
       <div class="contacts">
-        <a href="#"># visitsedona</a>
-        <a href="#">Тел: +7(495) 666-01-66</a>
+        <a class="hash-teg" href="#"># visitsedona</a>
+        <a class="phone" href="#">Тел: +7(495) 666-01-66</a>
       </div>
-      <div class="social-media">
+      <div class="social-media-container">
         <h4 class="visually-hidden">Социальные сети</h4>
-        <ul>
+        <ul class="social-media">
           <li>
             <a class="social-button blue-button" href="#">
             <span class="visually-hidden">Twitter</span>
