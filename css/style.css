@@ -35,8 +35,8 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  width: 1200px;
+  align-items: center;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -44,7 +44,7 @@ body {
   line-height: 21px;
   color: var(--main-text);
   font-weight: 400;
-  background-color: var(--max-white);
+  background-color: var(--bg-3-5);
   background-position: top center;
   background-repeat: no-repeat;
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
@@ -102,7 +102,8 @@ img {
   position: absolute;
   width: 138px;
   top: 0;
-  left: 531px;
+  left: 50%;
+  transform: translate(-50%);
   z-index: 10;
 }
 
@@ -193,6 +194,7 @@ img {
 
 .advantage span {
   display: inline-block;
+  vertical-align: middle;
   margin-top: 25px;
   margin-bottom: 23px;
 }
@@ -237,6 +239,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+  background-color: var(--max-white);
 }
 
 .adv-pic-item {
@@ -290,8 +293,9 @@ img {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  width: 568px;
+  width: 1200px;
   position: relative;
+  background-color: var(--max-white);
 }
 
 .interest {
@@ -315,12 +319,17 @@ img {
   vertical-align: middle;
   padding-top: 30px;
   padding-bottom: 30px;
-  align-self: stretch;
+  align-self: center;
   cursor: pointer;
+}
+
+.hotels-button {
+    width: 568px;
 }
 
 .hotels .hotels-choice-button {
   padding: 16px 0;
+  width: 458px;
 }
 
 .hotels-search-form {
@@ -516,7 +525,7 @@ img {
 
 /* Footer */
 
-footer {
+.footer {
   min-width: 1200px;
   min-height: 120px;
   display: flex;
@@ -738,6 +747,7 @@ footer {
 .hotel-choice label {
   vertical-align: middle;
   padding-left: 40px;
+  cursor: pointer;
 }
 
 .price-and-button label {
@@ -745,6 +755,7 @@ footer {
 }
 
 .price-and-button input {
+  position: relative;
   padding: 0;
   max-width: 120px;
   min-height: 36px;
@@ -799,7 +810,6 @@ footer {
   width: 137px;
   height: 36px;
 }
-}
 
 .button.hotel-choice-submit:hover,
 .button.hotel-choice-submit:focus,
@@ -817,6 +827,7 @@ footer {
   align-items: center;
   text-transform: uppercase;
   align-self: stretch;
+  background-color: var(--max-white);
 }
 
 .sorting {
