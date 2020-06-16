@@ -9,7 +9,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="shadow">
       <nav class="main-navigation">
         <a href="index.html" class="logo">
           <img src="img/logo.svg" width="138" height="70" alt="Логотип города Седона">
@@ -23,7 +23,7 @@
       </nav>
     </header>
 
-    <main class="hotels-main">
+    <main class="hotels-main shadow">
       <form class="hotel-choice" action="https://echo.htmlacademy.ru/courses" method="get">
         <h2 class="visually-hidden">Форма выбора отеля по критериям</h2>
         <fieldset class="infrastructure">
@@ -83,13 +83,13 @@
             <legend>Стоимость в сутки (Р):</legend>
             <div class="price-inputs">
               <label>
-                <span>От</span>
-                <input type="number" class="min-price" name="min-price" value="0" step="100">
+                <span class="visually-hidden">От</span>
+                <input type="number" class="min-price number-text" name="min-price" placeholder="OT 0" step="100">
               </label>
               <span class="divider"></span>
               <label>
-                <span>До</span>
-                <input type="number" class="max-price" name="max-price" value="3000" step="100">
+                <span class="visually-hidden">До</span>
+                <input type="number" class="max-price number-text" name="max-price" placeholder="ДО 3000" step="100">
               </label>
             </div>
             <div class="price-range">
@@ -141,20 +141,21 @@
             </li>
           </ul>
         </div>
-        <span class="separate-horizontal"></span>
         <div class="hotel">
           <div class="hotel-image">
             <img src="img/amara-resort.jpg" width="135" height="90" alt="фотография отеля">
           </div>
           <div class="hotel-description">
             <h3 class="hotel-name"><a href="#">Amara resort & spa</a></h3>
-            <div class="details">
-              <span>Гостиница</span>
-              <span>От 4000 р.</span>
-            </div>
-            <div class="hotel-buttons">
-              <a class="button blue-button" href="#">Подробнее</a>
-              <a class="button brown-button" href="#">Забронировать</a>
+            <div class="info">
+              <div class="left-column">
+                <span>Гостиница</span>
+                <a class="button blue-button" href="#">Подробнее</a>
+              </div>
+              <div class="right-column">
+                <span>От 4000 р.</span>
+                <a class="button brown-button" href="#">Забронировать</a>
+              </div>
             </div>
           </div>
           <div class="hotel-rating">
@@ -173,23 +174,24 @@
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
               </svg>
             </div>
-            <span class="reiting">Рейтинг: 8,5</span>
+            <span class="rating">Рейтинг: 8,5</span>
           </div>
         </div>
-        <span class="separate-horizontal"></span>
         <div class="hotel">
           <div class="hotel-image">
             <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="фотография отеля">
           </div>
           <div class="hotel-description">
             <h3 class="hotel-name"><a href="#">Desert Quail Inn</a></h3>
-            <div class="details">
-              <span>Мотель</span>
-              <span>От 3000 р.</span>
-            </div>
-            <div class="hotel-buttons">
-              <a class="button blue-button" href="#">Подробнее</a>
-              <a class="button brown-button" href="#">Забронировать</a>
+            <div class="info">
+              <div class="left-column">
+                <span>Мотель</span>
+                <a class="button blue-button" href="#">Подробнее</a>
+              </div>
+              <div class="right-column">
+                <span>От 3000 р.</span>
+                <a class="button brown-button" href="#">Забронировать</a>
+              </div>
             </div>
           </div>
           <div class="hotel-rating">
@@ -205,23 +207,24 @@
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
               </svg>
             </div>
-            <span class="reiting">Рейтинг: 8,9</span>
+            <span class="rating">Рейтинг: 8,9</span>
           </div>
         </div>
-        <span class="separate-horizontal"></span>
         <div class="hotel">
           <div class="hotel-image">
             <img src="img/villas-hotel.jpg" width="135" height="90" alt="фотография отеля">
           </div>
           <div class="hotel-description">
             <h3 class="hotel-name"><a href="#">Villas at Poco Diablo</a></h3>
-            <div class="details">
-              <span>Апартаменты</span>
-              <span>От 2000 р.</span>
-            </div>
-            <div class="hotel-buttons">
-              <a class="button blue-button" href="#">Подробнее</a>
-              <a class="button brown-button" href="#">Забронировать</a>
+            <div class="info">
+              <div class="left-column">
+                <span>Апартаменты</span>
+                <a class="button blue-button" href="#">Подробнее</a>
+              </div>
+              <div class="right-column">
+                <span>От 2000 р.</span>
+                <a class="button brown-button" href="#">Забронировать</a>
+              </div>
             </div>
           </div>
           <div class="hotel-rating">
@@ -234,18 +237,17 @@
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
               </svg>
             </div>
-            <span class="reiting">Рейтинг: 9,2</span>
+            <span class="rating">Рейтинг: 9,2</span>
           </div>
         </div>
-        <span class="separate-horizontal"></span>
       </section>
 
     </main>
 
-    <footer class="footer hotels-footer">
+    <footer class="footer hotels-footer shadow">
       <div class="contacts">
-        <a href="#"># visitsedona</a>
-        <a href="#">Тел: +7(495) 666-01-66</a>
+        <a class="hash-teg" href="#"># visitsedona</a>
+        <a class="phone" href="#">Тел: +7(495) 666-01-66</a>
       </div>
       <div class="social-media-container">
         <h4 class="visually-hidden">Социальные сети</h4>

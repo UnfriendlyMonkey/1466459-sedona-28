@@ -47,7 +47,6 @@ body {
   background-color: var(--bg-3-5);
   background-position: top center;
   background-repeat: no-repeat;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 a {
@@ -57,6 +56,11 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.shadow {
+  box-shadow: -5px 0 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 5px 0 15px rgba(0, 1, 1, 0.2);
 }
 
 .visually-hidden {
@@ -80,7 +84,7 @@ img {
   text-transform: uppercase;
   background-color: transparent;
   width: 1200px;
-  /*box-shadow: 5px 0px 15px rgba(0, 1, 1, 0.2);*/
+  /*box-shadow: 5px 0 15px rgba(0, 1, 1, 0.2);*/
 }
 
 .nav-list {
@@ -110,6 +114,8 @@ img {
   left: 50%;
   transform: translate(-50%);
   z-index: 10;
+  font-size: 0;
+  line-height: 0;
 }
 
 .nav-list a {
@@ -339,6 +345,7 @@ img {
 
 .hotels-search-form {
   position: absolute;
+  z-index: 5;
   bottom: -395px;
   left: calc(50% - 284px);
   display: flex;
@@ -351,12 +358,7 @@ img {
   padding: 55px;
   min-height: 285px;
   background-color: var(--max-white);
-}
-
-/* смена класса для убирания формы поиска отелей с главной страницы */
-
-.hotels-search-form.not-visible {
-  display: none;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .date-set {
@@ -416,8 +418,6 @@ img {
 .input-button {
   background-color: transparent;
   border: none;
-  color: var(--main-grey);
-  vertical-align: middle;
   cursor: pointer;
   align-self: center;
 }
@@ -444,16 +444,6 @@ img {
   margin: 0;
   padding: 0;
   border: none;
-}
-
-.adults-group {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
-.children-group {
-  grid-column-start: 2;
-  grid-column-end: 3;
 }
 
 .how-many-guests .date-set {
@@ -533,6 +523,25 @@ img {
   color: var(--white-transparent);
 }
 
+.map {
+  position: relative;
+}
+
+.map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
+.map iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+}
+
 /* Footer */
 
 .footer {
@@ -543,6 +552,8 @@ img {
   justify-content: space-between;
   align-content: stretch;
   text-transform: uppercase;
+  padding: 0 73px;
+  box-sizing: border-box;
 }
 
 .main-footer {
@@ -557,19 +568,26 @@ img {
 }
 
 .contacts {
-  flex-basis: 400px;
-  padding-left: 117px;
+  flex-basis: 351px;
   padding-top: 23px;
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
+  align-content: center;
   justify-content: flex-start;
+}
+
+.contacts a {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--max-black);
 }
 
 .hash-teg {
   display: block;
   width: 166px;
   text-align: center;
+  align-self: center;
   margin-bottom: 9px;
 }
 
@@ -577,10 +595,12 @@ img {
   display: block;
   width: 251px;
   text-align: center;
+  align-self: center;
 }
 
 .social-media-container {
-  flex-basis: 400px;
+  flex-basis: 351px;
+  flex-grow: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -596,13 +616,6 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.contacts a {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  color: var(--max-black);
 }
 
 .social-button {
@@ -623,7 +636,7 @@ img {
 }
 
 .made-by {
-  flex-basis: 400px;
+  flex-basis: 351px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -725,8 +738,16 @@ img {
   background-repeat: no-repeat;
 }
 
+.check-input:focus + .check-img {
+  background-image: url("../img/checkbox-off-focus.svg");
+}
+
 .check-input:checked + .check-img {
   background-image: url("../img/checkbox-on.svg");
+}
+
+.check-input:checked:focus + .check-img {
+  background-image: url("../img/checkbox-on-focus.svg");
 }
 
 .check-input:disabled + .check-img {
@@ -737,33 +758,34 @@ img {
   background-image: url("../img/checkbox-on-disabled.svg");
 }
 
-/* Раздел с ползунками цены и кнопкой submit */
-
 /* Убираем стрелочки из номерных полей ввода */
 
 /*Chrome:*/
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+.number-text::-webkit-outer-spin-button,
+.number-text::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /*Firefox:*/
-input[type="number"] {
+.number-text {
   -moz-appearance: textfield;
 }
 
 /*Others:*/
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+.number-text::-webkit-inner-spin-button,
+.number-text::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type=number] {
+.number-text {
   text-align: center;
+  color: var(--max-white);
 }
+
+/* Раздел с ползунками цены и кнопкой submit */
 
 .price-and-button {
   display: flex;
@@ -785,6 +807,14 @@ input[type=number] {
   border: none;
 }
 
+/* белый цвет для плейсхолдера */
+.price-and-button input::-moz-placeholder {color: var(--max-white); }
+.price-and-button input::-ms-input-placeholder {color: var(--max-white); }
+.price-and-button input::-webkit-input-placeholder {
+  color: var(--max-white);
+}
+.price-and-button input::placeholder {color: var(--max-white); }
+
 .price-inputs {
   display: flex;
   justify-content: space-around;
@@ -795,6 +825,10 @@ input[type=number] {
   text-align: center;
   margin-top: 11px;
   position: relative;
+}
+
+.price-inputs input {
+  color: var(--max-white);
 }
 
 .divider {
@@ -828,15 +862,23 @@ input[type=number] {
 
 .price-range .pin {
   position: absolute;
-  top: 11px;
+  top: 12px;
   width: 4px;
   height: 4px;
   padding: 0;
-  border: 8px solid var(--max-white);
+  border: 7px solid var(--max-white);
   background-color: #ababab;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 var(--white-transparent);
   cursor: pointer;
+}
+
+.price-range .pin:hover {
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  padding: 0;
+  border: 9px solid var(--max-white);
 }
 
 .price-range .pin-min {
@@ -849,6 +891,7 @@ input[type=number] {
 
 .price-and-button label {
   padding: 0;
+  position: relative;
 }
 
 .price-and-button input {
@@ -892,8 +935,13 @@ input[type=number] {
   background-color: var(--max-white);
 }
 
-.separate-horizontal {
-  width: 100%;
+.hotel::after,
+.sorting::after {
+  position: absolute;
+  bottom: 0;
+  left: -73px;
+  content: "";
+  width: 1200px;
   height: 1px;
   background-color: var(--bg-medium-v2);
 }
@@ -906,6 +954,7 @@ input[type=number] {
   align-self: stretch;
   min-height: 85px;
   margin: auto 73px;
+  position: relative;
 }
 
 .sorting h3 {
@@ -928,8 +977,7 @@ input[type=number] {
   margin-left: auto;
 }
 
-.search-results h3,
-.hotel-name a {
+.search-results h3 {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -983,17 +1031,21 @@ input[type=number] {
   fill: var(--blue-light);
 }
 
+/* Список найденных отелей */
+
 .hotel {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
-  min-height: 90px;
-  margin: 30px 73px;
+  align-items: center;
+  min-height: 150px;
+  margin: 0 73px;
+  position: relative;
 }
 
 .hotel-image {
   min-width: 135px;
+  height: 90px;
   flex-shrink: 0;
   margin: auto;
 }
@@ -1002,6 +1054,9 @@ input[type=number] {
   flex-basis: 288px;
   margin-left: 30px;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-rating {
@@ -1010,18 +1065,50 @@ input[type=number] {
   flex-shrink: 0;
 }
 
-.hotel-description {
+.hotel-description .hotel-name {
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+.hotel-name a {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--max-black);
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.hotel-name a:hover,
+.hotel-name a:focus {
+  color: var(--blue-light);
+}
+
+.hotel-name a:active {
+  color: var(--black-transparent);
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 63px;
+}
+
+.hotel-description .left-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.hotel-description span:first-of-type {
-  display: inline-block;
+  align-items: flex-start;
   min-width: 110px;
 }
 
-.hotel-description span:last-of-type {
+.hotel-description .right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 110px;
   margin-left: 6px;
 }
 
@@ -1039,15 +1126,15 @@ input[type=number] {
   min-width: 142px;
   line-height: 27px;
   padding: 0;
-  margin-left: 6px;
 }
 
 .hotel-rating {
   text-align: right;
   position: relative;
+  min-height: 90px;
 }
 
-.reiting {
+.rating {
   color: var(--bg-dark-v2);
   background-color: var(--bg-light);
   position: absolute;
