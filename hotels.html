@@ -82,15 +82,15 @@
           <fieldset class="price">
             <legend>Стоимость в сутки (Р):</legend>
             <div class="price-inputs">
-              <label>
-                <span class="visually-hidden">От</span>
-                <input type="number" class="min-price number-text" name="min-price" placeholder="OT 0" step="100">
-              </label>
+              <div class="price-container">
+                <label for="min-price">От</label>
+                <input type="number" class="min-price number-text" id="min-price" name="min-price" value="0" step="100">
+              </div>
               <span class="divider"></span>
-              <label>
-                <span class="visually-hidden">До</span>
-                <input type="number" class="max-price number-text" name="max-price" placeholder="ДО 3000" step="100">
-              </label>
+              <div class="price-container">
+                <label for="max-price">До</label>
+                <input type="number" class="max-price number-text" id="max-price" name="max-price" value="3000" step="100">
+              </div>
             </div>
             <div class="price-range">
               <div class="scale">
