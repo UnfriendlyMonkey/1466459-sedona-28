@@ -21,7 +21,16 @@ window.onload = function() {
 
 hotelSearch.addEventListener("click", function (evt) {
   	evt.preventDefault();
-    searchForm.classList.toggle("form-appear");
+    if (searchForm.classList.contains("form-appear")) {
+      searchForm.classList.remove("form-appear");
+      searchForm.classList.remove("form-error");
+    } else {
+      searchForm.classList.add("form-appear");
+      if (storage) {
+        howManyAdults.value = localStorage.getItem("adults");
+        howManyChildren.value = localStorage.getItem("children");
+      }
+    }
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -29,12 +38,19 @@ window.addEventListener("keydown", function (evt) {
     	if (searchForm.classList.contains("form-appear")) {
       		evt.preventDefault();
       		searchForm.classList.remove("form-appear");
+          searchForm.classList.remove("form-error");
     	}
   	}
 });
 
 searchForm.addEventListener("submit", function (evt) {
-	if (!fromDate || !howManyAdults.value) {
+	if (!fromDate.value || !howManyAdults.value) {
     	evt.preventDefault();
+      searchForm.classList.remove("form-error");
+      searchForm.offsetWidth = searchForm.offsetWidth;
+      searchForm.classList.add("form-error");
+    } else {
+      localStorage.setItem("adults", howManyAdults.value);
+      localStorage.setItem("children", howManyChildren.value);
     }
 });
